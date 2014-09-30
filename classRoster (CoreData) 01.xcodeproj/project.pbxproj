@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B5E3DED19BC1ABF0095E4B1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E3DEC19BC1ABF0095E4B1 /* Person.swift */; };
+		6B8FC43E19BD851A002FE783 /* gitHubDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8FC43C19BD851A002FE783 /* gitHubDefault.png */; };
+		6B8FC43F19BD851A002FE783 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B8FC43D19BD851A002FE783 /* placeholder.jpg */; };
 		6BCEDE4819BC19CB006D7EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEDE4719BC19CB006D7EBD /* AppDelegate.swift */; };
 		6BCEDE4B19BC19CB006D7EBD /* classRoster__CoreData__01.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEDE4919BC19CB006D7EBD /* classRoster__CoreData__01.xcdatamodeld */; };
 		6BCEDE4D19BC19CB006D7EBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEDE4C19BC19CB006D7EBD /* ViewController.swift */; };
 		6BCEDE5019BC19CB006D7EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEDE4E19BC19CB006D7EBD /* Main.storyboard */; };
 		6BCEDE5219BC19CB006D7EBD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BCEDE5119BC19CB006D7EBD /* Images.xcassets */; };
 		6BCEDE5E19BC19CB006D7EBD /* classRoster__CoreData__01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEDE5D19BC19CB006D7EBD /* classRoster__CoreData__01Tests.swift */; };
+		6BCEDE6819BC19E3006D7EBD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCEDE6719BC19E3006D7EBD /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B5E3DEC19BC1ABF0095E4B1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		6B5E3DEE19BC1E1B0095E4B1 /* classRoster (CoreData) 01-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "classRoster (CoreData) 01-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B8FC43C19BD851A002FE783 /* gitHubDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gitHubDefault.png; sourceTree = "<group>"; };
+		6B8FC43D19BD851A002FE783 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		6BCEDE4219BC19CB006D7EBD /* classRoster (CoreData) 01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "classRoster (CoreData) 01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCEDE4619BC19CB006D7EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BCEDE4719BC19CB006D7EBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +44,7 @@
 		6BCEDE5719BC19CB006D7EBD /* classRoster (CoreData) 01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "classRoster (CoreData) 01Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BCEDE5C19BC19CB006D7EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BCEDE5D19BC19CB006D7EBD /* classRoster__CoreData__01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classRoster__CoreData__01Tests.swift; sourceTree = "<group>"; };
+		6BCEDE6719BC19E3006D7EBD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +87,13 @@
 			isa = PBXGroup;
 			children = (
 				6BCEDE4719BC19CB006D7EBD /* AppDelegate.swift */,
+				6B5E3DEC19BC1ABF0095E4B1 /* Person.swift */,
 				6BCEDE4C19BC19CB006D7EBD /* ViewController.swift */,
+				6BCEDE6719BC19E3006D7EBD /* DetailViewController.swift */,
 				6BCEDE4E19BC19CB006D7EBD /* Main.storyboard */,
 				6BCEDE5119BC19CB006D7EBD /* Images.xcassets */,
+				6B8FC43C19BD851A002FE783 /* gitHubDefault.png */,
+				6B8FC43D19BD851A002FE783 /* placeholder.jpg */,
 				6BCEDE4919BC19CB006D7EBD /* classRoster__CoreData__01.xcdatamodeld */,
 				6BCEDE4519BC19CB006D7EBD /* Supporting Files */,
 			);
@@ -90,6 +103,7 @@
 		6BCEDE4519BC19CB006D7EBD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B5E3DEE19BC1E1B0095E4B1 /* classRoster (CoreData) 01-Bridging-Header.h */,
 				6BCEDE4619BC19CB006D7EBD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,6 +206,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B8FC43E19BD851A002FE783 /* gitHubDefault.png in Resources */,
+				6B8FC43F19BD851A002FE783 /* placeholder.jpg in Resources */,
 				6BCEDE5019BC19CB006D7EBD /* Main.storyboard in Resources */,
 				6BCEDE5219BC19CB006D7EBD /* Images.xcassets in Resources */,
 			);
@@ -211,9 +227,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B5E3DED19BC1ABF0095E4B1 /* Person.swift in Sources */,
 				6BCEDE4D19BC19CB006D7EBD /* ViewController.swift in Sources */,
 				6BCEDE4819BC19CB006D7EBD /* AppDelegate.swift in Sources */,
 				6BCEDE4B19BC19CB006D7EBD /* classRoster__CoreData__01.xcdatamodeld in Sources */,
+				6BCEDE6819BC19E3006D7EBD /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,9 +349,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "classRoster (CoreData) 01/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "classRoster (CoreData) 01/classRoster (CoreData) 01-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,9 +363,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "classRoster (CoreData) 01/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "classRoster (CoreData) 01/classRoster (CoreData) 01-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -401,6 +424,7 @@
 				6BCEDE6319BC19CB006D7EBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6BCEDE6419BC19CB006D7EBD /* Build configuration list for PBXNativeTarget "classRoster (CoreData) 01Tests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +433,7 @@
 				6BCEDE6619BC19CB006D7EBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
