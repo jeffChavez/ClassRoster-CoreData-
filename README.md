@@ -7,8 +7,7 @@ The user can retrieve a GitHub profile image associated with the username they t
 ![Gyazo](http://i.gyazo.com/9c121909ba76d94c8058552930cc2160.gif)
 
 The user can select a photo from their photo album, or take a picture from their camera.
-![Gif of photo album selection]
-(http://gyazo.com/03623fc8fbdd3bc0d4bc6aee9a24b6ee)
+[![Gyazo](http://i.gyazo.com/03623fc8fbdd3bc0d4bc6aee9a24b6ee.gif)](http://gyazo.com/03623fc8fbdd3bc0d4bc6aee9a24b6ee)
 
 ###Features
 - Data persistance with CoreData
