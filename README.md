@@ -14,5 +14,7 @@ The user can select a photo from their photo album, or take a picture from their
 - `UITableView`
 - `UIImagePicker`
 - `UIAlertController`
-- `NSOperationQueue` (for downloading the profileImageURL and converting to `UIImage`)
+- Asynchronous calls with `NSOperationQueue` (for downloading the profileImageURL and converting to `UIImage`)
 - AutoLayout, supports portrait and landscape orientation
+- Network call to GitHub with `NSURLSession`
+- JSON Parsing with `NSJSONSerialization`
