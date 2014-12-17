@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WSM-BP-B7P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WSM-BP-B7P">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -50,27 +50,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="SE0-0a-N1k" id="061-qR-qld"/>
                         <outlet property="tableView" destination="Xm9-IP-qH8" id="Gny-9w-Dll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="A23-nn-ggr">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="ogW-pk-Oj4"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="0Op-cJ-ZwU"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="4tE-JX-WU7"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="wy4-nS-rqZ"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="SE0-0a-N1k">
-                    <connections>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="tJ3-4t-Rp0"/>
-                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="c5e-if-hd2"/>
-                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="uAM-fa-KHN"/>
-                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="9ex-ei-PiL"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1119" y="381"/>
         </scene>

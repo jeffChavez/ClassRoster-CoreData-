@@ -5,12 +5,6 @@
 //  Created by Jeff Chavez on 9/3/14.
 //  Copyright (c) 2014 Jeff Chavez. All rights reserved.
 //
-/*
-Questions
-    - How do I make the button only clickable within the round circle?
-    - in nil the same as 0
-*/
-
 
 import UIKit
 import CoreData
@@ -54,13 +48,13 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         //populate imageViews with photos from selectedPerson or use placeholders if selectedPerson data is empty
         if self.selectedPerson?.photoAttribute != nil {
-            self.photoImageView.image = UIImage (data: selectedPerson?.photoAttribute)
+            self.photoImageView.image = UIImage (data: selectedPerson!.photoAttribute!)
         }
         else {
             self.photoImageView.image = UIImage (named: "placeholder.jpg")
         }
         if self.selectedPerson?.gitHubPhotoAttribute != nil {
-            self.gitHubPhotoImageView.image = UIImage (data: selectedPerson?.gitHubPhotoAttribute)
+            self.gitHubPhotoImageView.image = UIImage (data: selectedPerson!.gitHubPhotoAttribute!)
         }
         else {
             self.gitHubPhotoImageView.image = UIImage (named: "gitHubDefault")
@@ -80,7 +74,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     //when touching outside of the textbox or keyboard, dismiss keyboard
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     
@@ -98,7 +92,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         let context: NSManagedObjectContext = appDel.managedObjectContext!
         let en = NSEntityDescription.entityForName("Person", inManagedObjectContext: context)
         
-        //check if person exists, if so fill objects with selectedPerson data
+        //check if person exists, if so fill selectedPerson data with object data
         if selectedPerson? != nil {
             selectedPerson?.firstNameAttribute = firstNameTextField.text
             selectedPerson?.lastNameAttribute = lastNameTextField.text
@@ -120,7 +114,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         else {
             
             //create new instance of our data model and initialize
-            var newPerson = Person(entity: en, insertIntoManagedObjectContext: context)
+            var newPerson = Person(entity: en!, insertIntoManagedObjectContext: context)
             
             //map our properties
             newPerson.firstNameAttribute = firstNameTextField.text
@@ -145,11 +139,11 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         context.save(nil)
         
         //navigate back to vc
-        self.navigationController.popToRootViewControllerAnimated(true)
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
     @IBAction func cancelData (sender: AnyObject) {
-        self.navigationController.popToRootViewControllerAnimated(true)
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
     @IBAction func choosePhotoIsPressed (sender: AnyObject) {
@@ -218,7 +212,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         var profilePhotoURL = NSURL()
         self.imageDownloadQueue.addOperationWithBlock { () -> Void in
             let session = NSURLSession.sharedSession()
-            let task = session.dataTaskWithURL(gitHubURL, completionHandler: { (data, response, error) -> Void in
+            let task = session.dataTaskWithURL(gitHubURL!, completionHandler: { (data, response, error) -> Void in
                 if error != nil {
                     println("error1")
                     self.gitHubPhotoImageView.image = UIImage (named: "gitHubDefault")
@@ -236,10 +230,10 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
                         println("error2")
                     } else {
                         if let avatarURL = jsonResult["avatar_url"] as? String {
-                            profilePhotoURL = NSURL(string: avatarURL)
+                            profilePhotoURL = NSURL(string: avatarURL)!
                         }
                         var profilePhotoData = NSData(contentsOfURL: profilePhotoURL)
-                        var profilePhotoImage = UIImage (data: profilePhotoData)
+                        var profilePhotoImage = UIImage (data: profilePhotoData!)
                         NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                             self.gitHubPhotoImageView.image = profilePhotoImage
                             self.gitHubActivityIndicator.stopAnimating()

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     var classArray  = [Person]()
     
@@ -35,14 +35,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 1
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return classArray.count
     }
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         var personForRow : Person = classArray[indexPath.row]
-        cell.textLabel.text = "\(personForRow.firstNameAttribute) \(personForRow.lastNameAttribute)"
+        cell.textLabel!.text = "\(personForRow.firstNameAttribute) \(personForRow.lastNameAttribute)"
         return cell
     }
     
@@ -60,11 +60,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         let indexPath = self.tableView.indexPathForSelectedRow()
         if segue.identifier == "showPersonSegue" {
             let destination = segue.destinationViewController as DetailViewController
-            destination.selectedPerson = self.classArray[indexPath.row]
+            destination.selectedPerson = self.classArray[indexPath!.row]
         }
     }
     
