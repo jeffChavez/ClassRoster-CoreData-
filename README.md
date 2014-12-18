@@ -11,6 +11,9 @@ The user can select a photo from their photo album, or take a picture from their
 
 ![Imgur](http://imgur.com/PQLPZEN.gif)
 
+The app supports both portrait and lanscape orientation
+![Imgur](http://i.imgur.com/Iy1u9EW.gif)
+
 ###Features
 - Data persistance with `CoreData`
 - `UITableView`
